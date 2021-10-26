@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">demovar2</string>
     <string name="e_mail">E-mail</string>
-    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
+    <string name="password">Пароль</string>
+    <string name="sign_in">Войти</string>
+    <string name="sign_up">Регистрация</string>
 </resources>
