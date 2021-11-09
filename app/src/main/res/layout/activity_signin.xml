@@ -97,6 +97,8 @@
         android:layout_marginBottom="16dp"
         android:background="@drawable/frame_2"
         android:clipToOutline="true"
+        android:clickable="true"
+        android:onClick="siasignin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/frame_72" >
@@ -113,7 +115,7 @@
             android:text="@string/sign_in"
             android:textAlignment="center"
             android:textAppearance="@style/sign_in"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -127,7 +129,8 @@
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/frame_71"
-        android:onClick="signup"
+        android:clickable="true"
+        android:onClick="siasignup"
         android:clipToOutline="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

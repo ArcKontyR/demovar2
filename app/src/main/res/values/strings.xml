@@ -9,4 +9,9 @@
     <string name="sign_up">Регистрация</string>
     <string name="register">Зарегистрироваться</string>
     <string name="have_account">У меня уже есть аккаунт</string>
+    <string name="title_main">Главная</string>
+    <string name="title_collections">Коллекции</string>
+    <string name="title_compilation">Подборка</string>
+    <string name="title_profile">Профиль</string>
+    <string name="captain_mar">Captain Marvel</string>
 </resources>

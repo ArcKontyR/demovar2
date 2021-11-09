@@ -17,71 +17,73 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <RelativeLayout
-        android:id="@+id/frame_71"
-        android:layout_width="0dp"
-        android:layout_height="44dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="41dp"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/frame_71"
-        android:clipToOutline="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView">
 
-        <EditText
-            android:id="@+id/name"
+
+        <RelativeLayout
+            android:id="@+id/frame_71"
             android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_alignParentStart="true"
+            android:layout_height="44dp"
+            android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
             android:layout_marginStart="16dp"
+            android:layout_marginTop="41dp"
             android:layout_marginEnd="16dp"
-            android:fontFamily="sans-serif"
-            android:hint="@string/name"
-            android:inputType="textEmailAddress"
-            android:textAppearance="@style/e_mail"
-            android:textColor="@color/white"
-            android:textColorHint="#AFAFAF" />
-    </RelativeLayout>
+            android:background="@drawable/frame_71"
+            android:clipToOutline="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView">
 
-    <RelativeLayout
-        android:id="@+id/frame_72"
-        android:layout_width="0dp"
-        android:layout_height="44dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/frame_71"
-        android:clipToOutline="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/frame_71">
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="sans-serif"
+                android:hint="@string/name"
+                android:inputType="textEmailAddress"
+                android:textAppearance="@style/e_mail"
+                android:textColor="@color/white"
+                android:textColorHint="#AFAFAF" />
+        </RelativeLayout>
 
-        <EditText
-            android:id="@+id/surname"
+        <RelativeLayout
+            android:id="@+id/frame_72"
             android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_alignParentStart="true"
+            android:layout_height="44dp"
+            android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
             android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
-            android:fontFamily="sans-serif"
-            android:hint="@string/surname"
-            android:inputType="textEmailAddress"
-            android:textAppearance="@style/e_mail"
-            android:textColor="@color/white"
-            android:textColorHint="#AFAFAF" />
-    </RelativeLayout>
+            android:background="@drawable/frame_71"
+            android:clipToOutline="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/frame_71">
+
+            <EditText
+                android:id="@+id/surname"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="sans-serif"
+                android:hint="@string/surname"
+                android:inputType="textEmailAddress"
+                android:textAppearance="@style/e_mail"
+                android:textColor="@color/white"
+                android:textColorHint="#AFAFAF" />
+        </RelativeLayout>
 
         <RelativeLayout
             android:id="@+id/frame_73"
@@ -196,7 +198,9 @@
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
             android:background="@drawable/frame_2"
+            android:clickable="true"
             android:clipToOutline="true"
+            android:onClick="suasignup"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/frame_75">
@@ -228,6 +232,8 @@
             android:layout_marginBottom="16dp"
             android:background="@drawable/frame_71"
             android:clipToOutline="true"
+            android:clickable="true"
+            android:onClick="suasignin"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/frame_2">
@@ -246,7 +252,5 @@
                 android:textAppearance="@style/sign_up"
                 android:textStyle="bold" />
         </RelativeLayout>
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
