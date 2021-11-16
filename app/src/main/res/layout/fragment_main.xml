@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/ic_launcher_background">
+    android:background="@color/ic_launcher_background"
+    tools:context=".ui.main.MainFragment">
 
 
     <TextView
@@ -16,9 +17,26 @@
         android:layout_marginStart="94dp"
         android:layout_marginTop="34dp"
         android:layout_marginEnd="89dp"
+        android:layout_marginBottom="44dp"
         android:gravity="center_horizontal|top"
         android:text="@string/captain_mar"
         android:textAppearance="@style/captain_mar"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/rectangle_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/rectangle_1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="110dp"
+        android:layout_marginBottom="111dp"
+        android:background="@drawable/captain_marvel"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

@@ -5,7 +5,18 @@
         android:id="@+id/navigation_main"
         android:icon="@drawable/icon_main"
         android:title="@string/title_main" />
-
+    <item
+        android:id="@+id/navigation_compilation"
+        android:icon="@drawable/icon_compilation"
+        android:title="@string/title_compilation" />
+    <item
+        android:id="@+id/navigation_collection"
+        android:icon="@drawable/icon_collection"
+        android:title="@string/title_collections" />
+    <item
+        android:id="@+id/navigation_profile"
+        android:icon="@drawable/icon_profile"
+        android:title="@string/title_profile" />
 
 
 </menu>

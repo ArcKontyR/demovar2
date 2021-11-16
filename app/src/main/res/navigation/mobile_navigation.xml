@@ -7,9 +7,23 @@
 
     <fragment
         android:id="@+id/navigation_main"
-        android:name="com.example.demovar2.MainActivity"
+        android:name="com.example.demovar2.ui.main.MainFragment"
         android:label="@string/title_main"
-        tools:layout="@layout/activity_main"
-        android:icon="@drawable/icon_main"/>
+        tools:layout="@layout/fragment_main"/>
+    <fragment
+        android:id="@+id/navigation_compilation"
+        android:name="com.example.demovar2.ui.compilation.CompilationFragment"
+        android:label="@string/title_compilation"
+        tools:layout="@layout/fragment_compilation"/>
+    <fragment
+        android:id="@+id/navigation_collection"
+        android:name="com.example.demovar2.ui.collections.CollectionFragment"
+        android:label="@string/title_collections"
+        tools:layout="@layout/fragment_collections"/>
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.example.demovar2.ui.profile.ProfileFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_profile"/>
 
 </navigation>

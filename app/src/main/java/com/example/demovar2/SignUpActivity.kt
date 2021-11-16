@@ -7,6 +7,7 @@ import android.content.Intent
 import android.content.IntentFilter
 import android.os.CountDownTimer
 import android.widget.EditText
+import java.util.regex.Pattern.compile
 import kotlin.concurrent.timer
 
 class SignUpActivity : AppCompatActivity() {
@@ -25,7 +26,14 @@ class SignUpActivity : AppCompatActivity() {
         name = findViewById(R.id.name)
         surname =findViewById(R.id.surname)
     }
-
+    val paternt =("[a-z0-9]{1,256}" +
+            "\\@" +
+            "[a-z]{1,10}" +
+            "\\." +
+            "[a-z]{1,3}")
+    fun EmailValid (email:String):Boolean{
+        return compile (paternt).matcher(email).matches()
+    }
     fun suasignup(view: android.view.View){
         if (email.text.toString().isNotEmpty()
             && password.text.toString().isNotEmpty()
@@ -33,24 +41,33 @@ class SignUpActivity : AppCompatActivity() {
             && password.text.toString() == repeatpassword.text.toString()
             && name.text.toString().isNotEmpty()
             && surname.text.toString().isNotEmpty()){
-            val alert = AlertDialog.Builder(this)
-                .setTitle("Уведомление")
-                .setMessage("Вы зарегистрировались")
-                .setPositiveButton("OK", null)
-                .create()
-                .show()
-            val timer = object: CountDownTimer(1500,250){
-                override fun onTick(p0: Long) {
+            if (EmailValid(email.text.toString())) {
+                val alert = AlertDialog.Builder(this)
+                    .setTitle("Уведомление")
+                    .setMessage("Вы зарегистрировались")
+                    .setPositiveButton("OK", null)
+                    .create()
+                    .show()
+                val timer = object : CountDownTimer(1500, 250) {
+                    override fun onTick(p0: Long) {
 
-                }
+                    }
 
-                override fun onFinish(){
-                    val intent = Intent(this@SignUpActivity, SignInActivity::class.java)
-                    startActivity(intent)
-                    finish()
+                    override fun onFinish() {
+                        val intent = Intent(this@SignUpActivity, SignInActivity::class.java)
+                        startActivity(intent)
+                        finish()
+                    }
                 }
+                timer.start()
+            } else {
+                val alert = AlertDialog.Builder(this)
+                    .setTitle("Уведомление")
+                    .setMessage("Email введен неверно")
+                    .setPositiveButton("OK", null)
+                    .create()
+                    .show()
             }
-            timer.start()
         } else
         {
             if(password.text.toString() != repeatpassword.text.toString()){
