@@ -17,4 +17,7 @@ class MainFragment : Fragment() {
         val root = inflater.inflate(R.layout.fragment_main, container, false)
         return root
     }
+    override fun onDestroyView() {
+        super.onDestroyView()
+    }
 }

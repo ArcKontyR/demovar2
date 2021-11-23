@@ -17,5 +17,7 @@ class CollectionFragment : Fragment() {
         val root = inflater.inflate(R.layout.fragment_collections, container, false)
         return root
     }
-
+    override fun onDestroyView() {
+        super.onDestroyView()
+    }
 }

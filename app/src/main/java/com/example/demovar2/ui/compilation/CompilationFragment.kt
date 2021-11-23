@@ -17,4 +17,7 @@ class CompilationFragment : Fragment() {
         val root = inflater.inflate(R.layout.fragment_compilation, container, false)
         return root
     }
+    override fun onDestroyView() {
+        super.onDestroyView()
+    }
 }
